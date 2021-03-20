@@ -117,6 +117,7 @@ export default {
     ['nuxt-vue-select', { /* module options */ }],
     '@nuxtjs/axios',
     'nuxt-route-meta',
+    '@nuxtjs/composition-api',
     '@nuxtjs/proxy'
   ],
 
