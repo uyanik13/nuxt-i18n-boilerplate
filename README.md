@@ -1,4 +1,12 @@
-# nuxtApp
+# Nuxt i18n Boiler Plate 
+
+
+## Skipped Features
+```
+ - Language switcher shown a text - Not a dropdown  beacause its only there are 2 languages.
+ - Language switcher shown a text - Not a dropdown  beacause its only there are 2 languages.
+```
+
 
 ## Build Setup
 

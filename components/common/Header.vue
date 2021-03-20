@@ -10,7 +10,7 @@
             :icon="['fa', 'heart']"
             class="mt-1 mx-2 hidden sm:hidden md:hidden lg:flex"
           />
-          <span>HomePage</span>
+          <span>{{ page.title }}</span>
         </div>
 
         <div
@@ -94,6 +94,10 @@ export default {
   },
   data() {
     return {
+      page: {
+        title: null, //comes from api page list or any array
+        slug: null,
+      },
       isShowMobileMenu: false,
       showLoginModal: false,
       showAuthUserMenu: false,
@@ -120,7 +124,6 @@ export default {
     },
   },
 
-  watch: {},
   methods: {
     click() {
       console.log("clicked");
@@ -141,8 +144,17 @@ export default {
       });
     },
   },
-
-  mounted() {},
-  created() {},
+  async asyncData({ query, store }) {
+    //console.log(query, store);
+  },
+  watch: {
+    $route() {
+      this.page.title = this.$route.name;
+    },
+  },
+  created() {
+    this.page.title = this.$route.name;
+    // console.log(this.$router);
+  },
 };
 </script>

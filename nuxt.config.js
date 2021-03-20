@@ -114,7 +114,9 @@ export default {
       langDir: 'locales/',
       fallbackLocale: 'tr'
     }],
+    ['nuxt-vue-select', { /* module options */ }],
     '@nuxtjs/axios',
+    'nuxt-route-meta',
     '@nuxtjs/proxy'
   ],
 
